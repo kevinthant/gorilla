@@ -1,8 +1,9 @@
 <?php
 namespace Thant\Gorilla;
 
-use Net_Server_Handler;
+
 use Thant\Gorilla\JobServer\Handler;
+use Net_Server;
 
 /*
  * To change this template, choose Tools | Templates
@@ -33,7 +34,7 @@ class JobServer
 				$server->setDebugMode('text', '/tmp/gorilla.log');
 			}
 
-			if(PEAR::isError($server))
+			if(\PEAR::isError($server))
 			{
 				error_log($server->getMessage());
 				$server->_sendDebugMessage($server->getMessage());

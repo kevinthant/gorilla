@@ -1,7 +1,9 @@
 {
     "require": {
         "pear/pear": "^1.10",
-        "pear/net_server": "dev-master#1.0.3"
+        "pear/net_socket": "^1.2.1",
+        "pear/net_server": "dev-master#1.0.3",
+        "symfony/console": "^3.2"
     },
     "repositories": [
         {
@@ -9,5 +11,10 @@
             "url": "https://github.com/pear/Net_Server.git",
             "no-api": true
         }
-    ]
+    ],
+    "autoload": {
+        "psr-4": {
+            "Thant\\Gorilla\\": "src"
+        }
+    }
 }

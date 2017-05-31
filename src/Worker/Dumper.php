@@ -1,5 +1,6 @@
 <?php
 namespace Thant\Gorilla\Worker;
+use Thant\Gorilla\IQue;
 use Thant\Gorilla\IWorker;
 
 /**
@@ -15,7 +16,15 @@ class Dumper implements IWorker
 
 	public function perform($client_id, array $options)
 	{
+		ob_start();
+
 		echo "DUMPER: request from #$client_id:  ". var_export($options, true) . "\n";
+
+		$output = ob_get_contents();
+		ob_end_clean();
+
+		echo $output;
+		return array(IQue::QUE_STATUS_COMPLETED, $output);
 	}
 
 	public static function getName()

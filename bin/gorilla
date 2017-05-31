@@ -1,0 +1,19 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: kthant
+ * Date: 5/31/2017
+ * Time: 3:35 PM
+ */
+require_once  __DIR__ . '/../vendor/autoload.php';
+
+use Symfony\Component\Console\Application;
+use Thant\Gorilla\Console\Command\Start;
+use Thant\Gorilla\Console\Command\Push;
+use Thant\Gorilla\Console\Command\Stop;
+
+$application = new Application();
+$application->add(new Start());
+$application->add(new Push());
+$application->add(new Stop());
+$application->run();

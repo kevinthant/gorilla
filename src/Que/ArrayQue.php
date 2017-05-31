@@ -20,16 +20,28 @@ class ArrayQue implements IQue
 
 	public function addItem(array $item)
 	{
-		array_push($this->que, $item);
+		$this->que[$item['id']] = $item;
 	}
 
 	public function getOutstandingItems()
 	{
-
+		return array_filter($this->que, function($item){
+			return $item['status'] < IQue::QUE_STATUS_COMPLETED && $item['status'] >= IQue::QUE_STATUS_PENDING;
+		});
 	}
 
-	public function setItemStatus($status)
+	public function saveItem($item)
 	{
-
+		$this->que[$item['id']] = $item;
 	}
+
+	public function getItem($id)
+	{
+		if(!array_key_exists($id, $this->que))
+		{
+			return false;
+		}
+		return $this->que[$id];
+	}
+
 }

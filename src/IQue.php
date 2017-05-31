@@ -17,4 +17,5 @@ interface IQue
 	public function addItem(array $item);
 	public function getOutstandingItems();
 	public function saveItem($item);
+	public function getItem($id);
 }
