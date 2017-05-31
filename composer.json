@@ -1,0 +1,13 @@
+{
+    "require": {
+        "pear/pear": "^1.10",
+        "pear/net_server": "dev-master#1.0.3"
+    },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/pear/Net_Server.git",
+            "no-api": true
+        }
+    ]
+}
