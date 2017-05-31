@@ -1,0 +1,58 @@
+*.kdev4
+nbbuild
+nb-build.xml
+nbproject/
+.project
+.settings
+.buildpath
+*~
+logs/
+npm-debug.log
+uploads_old/
+uploads/
+.idea/
+.vagrant/
+.DS_Store
+notes/
+# ignore testing/ sandbox code
+controllers/Zeus/testController.php
+templates/Zeus/test
+/uploads/*
+!/uploads/proposal/super.pdf
+!/uploads/proposal/select.pdf
+!/uploads/proposal/complete.pdf
+/vendor/
+report/
+
+environment.env
+# Ignore npm modules
+node_modules/
+
+# Ignore Bower front-end libraries
+htdocs/libs/
+
+# Ignore CSS, as Issue #7837 means Grunt is now compiling things
+htdocs/css/Zeus/
+
+# Ignore the generated Style Guide
+templates/Zeus/styleGuide/
+
+# Ignore JS created by Grunt
+htdocs/js/Zeus/global.js
+htdocs/js/Zeus/global.min.js
+
+report/
+
+# observed generated files: most seem from running PhpStorm in this directory
+IntelliJ*
+bench_results.txt
+codestyles/
+installed.txt
+options/
+tmp/
+puphpet/puppet/modules/*
+!puphpet/puppet/modules/.gitkeep
+puphpet/files/dot/
+!puphpet/files/dot/ssh/*
+puphpet/puppet/.librarian
+puphpet/puppet/.tmp
