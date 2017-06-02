@@ -1,4 +1,5 @@
 {
+    "name": "kevinthant/gorilla",
     "require": {
         "pear/pear": "^1.10",
         "pear/net_socket": "^1.2.1",
